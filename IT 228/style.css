@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Spectral');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+
+header nav{
+    background: #EEFFDA;
+    padding: 10px 0;
+}
+header nav {
+    border-bottom: 1px solid #f1f1f1;
+  }
+header nav .nav__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 27px 28px;
+    right: 0;
+}
+  
+header nav .close,
+input[type="checkbox"] {
+    display: none;
+}
+header nav .hamburger {
+    margin-top: 0.2rem;
+}
+header nav .nav__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+}
+header nav .nav__menu img{
+    width: 100px;
+}
+header nav li {
+    list-style: none;
+    display: none;
+ }
+ header nav li:first-child {
+    margin-right: auto;
+    display: block;
+}
+header nav .nav__menu a {
+    text-decoration: none;
+    color: initial;
+    font-size: 1.2rem;
+}
+header nav .nav__menu a:hover{
+    color: #F58634;
+}
+header nav #nav__checkbox:checked ~ ul.nav__menu li {
+    display: block;
+}
+header nav #nav__checkbox:checked ~ label.nav__toggle .hamburger {
+    display: none;
+}
+header nav #nav__checkbox:checked ~ label.nav__toggle .close {
+    display: block;
+}
+  
+@media only screen and (min-width: 768px) {
+    header nav .nav__toggle {
+      display: none;
+    }
+    header nav .nav__menu {
+      flex-direction: row;
+    }
+    header nav .nav__menu li {
+      display: block;
+    }
+    
+}
+  
+
+.hero-section{
+    background: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+}
+.hero-section .overlay{
+    background: rgba(0,0,0,0.5);
+    height: 700px;
+}
+.hero-section .caption{
+    max-width: 700px;
+    padding-top: 220px;
+}
+.hero-section .caption h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.hero-section .caption p{
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+.about-section{
+    margin-top: 100px;
+}
+
+.about-section .row{
+    display: flex;
+}
+.about-section .content{
+    width: 50%;
+    padding-right: 30px;
+}
+.about-section .content h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.about-section .content p{
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.about-section .image{
+    width: 50%;
+}
+.about-section .image img{
+    width: 100%;
+}
+
+.flavors-list{
+    background: #f1f1f1;
+    padding: 80px 0;
+    margin-top: 70px;
+}
+.flavors-list .heading h2{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.flavors-list .row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.flavors-list .card{
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.flavors-list .card img{
+    width: 100%;
+}
+.flavors-list .card h2{
+    font-size: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.contact-info{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.contact-info .row{
+    display: flex;
+}
+.contact-info .image{
+    width: 50%;
+}
+.contact-info .image img{
+    width: 80%;
+}
+.contact-info .content{
+    width: 50%;
+}
+.contact-info .content h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-info .content h3{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.contact-info .content p{
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.contact-info .content .follow-icon{
+    display: flex;
+    margin-top: 20px;
+}
+.contact-info .content .follow-icon .item{
+    margin-right: 20px;
+    height: 50px;
+    width: 50px;
+    background: #000;
+    text-align: center;
+}
+.contact-info .content .follow-icon .item:hover{
+    background: #008037;
+}
+.contact-info .content .follow-icon .item a{
+    padding: 10px;
+    border-radius: 50%;
+}
+.contact-info .content .follow-icon .item .fa-brands{
+    color: #fff;
+    font-size: 20px;
+   padding: 15px 0;
+}
+footer p{
+    background: #070706;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+
+/* Contact page css */
+.contact {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #008037;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .name {
+    margin-right: 10px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #008037;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button-area{
+  display: flex;
+  align-items: center;
+}
+.contact .right form button{
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 25px;
+    background: #008037;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.contact-page .container{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+
+/* Local vendor page css */
+.vendor-hero{
+    background: url("../images/female-customer-reaching-food-from-vendor.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400px;
+}
+.vendor-section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.vendor-section .row{
+    display: flex;
+}
+.vendor-section .content{
+    width: 50%;
+    padding-right: 30px;
+}
+.vendor-section .content h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.vendor-section .content p{
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.vendor-section .image{
+    width: 50%;
+}
+.vendor-section .image img{
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width: 767px){
+    header nav .nav__menu img {
+        padding-left: 15px;
+    }
+    
+    .hero-section{
+        height: 450px;
+    }
+    .hero-section .overlay{
+        height: 450px;
+    }
+    .hero-section .caption{
+        padding: 15px;
+        padding-top: 100px;
+        box-sizing: border-box;
+        
+    }
+    .hero-section .caption h1{
+        font-size: 35px;
+    }
+    .about-section{
+        padding: 15px;
+        margin-top: 50px;
+        box-sizing: border-box;
+    }
+    .about-section .row{
+        display: block;
+    }
+    .about-section .content{
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .about-section .image{
+        width: 100%;
+    }
+    .about-section .image img{
+        margin-top: 20px;
+    }
+    .flavors-list{
+        margin-top: 50px;
+        padding: 50px 15px;
+        box-sizing: border-box;
+    }
+    .flavors-list .row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .contact-info{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .contact-info .row{
+        display: block;
+    }
+    .contact-info .image{
+        width: 100%;
+    }
+    .contact-info .content{
+        width: 100%;
+    }
+    .contact-info .image img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .vendor-hero{
+        height: 250px;
+    }
+    .vendor-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 15px;
+    }
+    .vendor-section .content{
+        padding-right: 0;
+    }
+    .vendor-section .row{
+        display: block;
+    }
+    .vendor-section .content{
+        width: 100%;
+    }
+    .vendor-section .image{
+        width: 100%;
+    }
+    .vendor-section .image img{
+        margin-top: 20px;
+    }
+    .contact{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .contact .title{
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-top: 0;
+        text-align: center;
+    }
+    .contact .contact-content{
+        display: block;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+    }
+    .contact-form{
+        margin-top: 30px;
+    }
+    .contact .contact-content .text{
+        font-size: 20px;
+    }
+
+}
+
+
+
+
